@@ -97,19 +97,19 @@ To install last stable release from pypi:
 > We will upload the up-to-date package under new name (proxybroker2) when the support for 3.10 is ready. [https://github.com/bluet/proxybroker2/issues/89](https://github.com/bluet/proxybroker2/issues/89)
 
 ``` {.sourceCode .bash}
-$ pip install proxybroker
+pip install proxybroker
 ```
 
 To install the latest development version from GitHub:
 
 ``` {.sourceCode .bash}
-$ pip install -U git+https://github.com/bluet/proxybroker2.git
+pip install -U git+https://github.com/bluet/proxybroker2.git
 ```
 
 ### Use pre-built Docker image
 
 ``` {.sourceCode .bash}
-$ docker pull bluet/proxybroker2
+docker pull bluet/proxybroker2
 ```
 
 ### Build bundled one-file executable with pyinstaller
@@ -123,7 +123,7 @@ Install these tools
  - upx
  - objdump (this tool is usually in the binutils package)
 ``` {.sourceCode .bash}
-$ sudo apt install -y upx-ucl binutils # On Ubuntu / Debian
+sudo apt install -y upx-ucl binutils # On Ubuntu / Debian
 ```
 
 #### Build
@@ -149,7 +149,7 @@ Usage
 Find and show 10 HTTP(S) proxies from United States with the high level of anonymity:
 
 ``` {.sourceCode .bash}
-$ proxybroker find --types HTTP HTTPS --lvl High --countries US --strict -l 10
+proxybroker find --types HTTP HTTPS --lvl High --countries US --strict -l 10
 ```
 
 ![image](https://raw.githubusercontent.com/constverum/ProxyBroker/master/docs/source/_static/cli_find_example.gif)
@@ -159,7 +159,7 @@ $ proxybroker find --types HTTP HTTPS --lvl High --countries US --strict -l 10
 Find and save to a file 10 US proxies (without a check):
 
 ``` {.sourceCode .bash}
-$ proxybroker grab --countries US --limit 10 --outfile ./proxies.txt
+proxybroker grab --countries US --limit 10 --outfile ./proxies.txt
 ```
 
 ![image](https://raw.githubusercontent.com/constverum/ProxyBroker/master/docs/source/_static/cli_grab_example.gif)
@@ -169,7 +169,7 @@ $ proxybroker grab --countries US --limit 10 --outfile ./proxies.txt
 Run a local proxy server that distributes incoming requests to a pool of found HTTP(S) proxies with the high level of anonymity:
 
 ``` {.sourceCode .bash}
-$ proxybroker serve --host 127.0.0.1 --port 8888 --types HTTP HTTPS --lvl High --min-queue 5
+proxybroker serve --host 127.0.0.1 --port 8888 --types HTTP HTTPS --lvl High --min-queue 5
 ```
 
 ![image](https://raw.githubusercontent.com/constverum/ProxyBroker/master/docs/source/_static/cli_serve_example.gif)
